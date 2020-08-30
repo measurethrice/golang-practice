@@ -4,7 +4,8 @@ import (
 	"os"
 	"testing"
 )
- 
+
+// This fuction asserts some default properties of the starting deck. 
 func TestNewDeck(t *testing.T) {
 	d := newDeck()
 
@@ -28,6 +29,8 @@ func TestNewDeck(t *testing.T) {
 
 }
 
+// This function asserts whether the saveToFile() and newDeckFromFile()
+// functions are working properly.
 func TestSaveToDeckAndNewDeckFromFile(t *testing.T)  {
 	os.Remove("_decktesting")
 
