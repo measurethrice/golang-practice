@@ -1,20 +1,16 @@
 package main	
 
-import "fmt"	
+// import "fmt"	
 
 // card := "Ace of Spades"	// cannot assign outside of function body
 // var deckSize int 		// we can declare a variable, however
 
 func main() {
-	cards := []string{newCard()}
-	cards = append(cards, "Six of Spades")
+	// Call newDeck() and create the deck
+	// 'cards'.
+	cards := newDeck()
+	cards.saveToFile("my_cards")
 
-	for i, card := range cards {
-		fmt.Println(i, card)
-	}
-	// fmt.Println(cards)
+
 }
 
-func newCard() string {
-	return "Five of Diamonds"
-}
